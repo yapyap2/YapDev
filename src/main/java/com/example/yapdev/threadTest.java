@@ -2,8 +2,6 @@ package com.example.yapdev;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
-@Data
 @RequiredArgsConstructor
 public class threadTest extends Thread{
 

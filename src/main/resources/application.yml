@@ -5,16 +5,12 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
-  h2:
-    console:
-      enabled: true
-      path: /h2
   datasource:
     hikari:
-      jdbc-url: jdbc:h2:tcp://localhost/~/yapyap
-      driver-class-name: org.h2.Driver  
-      username: sa
-      password:
+      jdbc-url: jdbc:mysql://yapdev-db.cxuu591yrej6.us-west-2.rds.amazonaws.com/yapdevDB
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: wonwoo8
+      password: 1712wonwoo
 server:
   servlet:
     encoding:

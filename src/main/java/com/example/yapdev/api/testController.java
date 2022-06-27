@@ -3,8 +3,12 @@ package com.example.yapdev.api;
 import com.example.yapdev.repository.dto.testDto;
 import com.example.yapdev.threadTest;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,5 +44,21 @@ public class testController {
     public void threadStop(@RequestParam int i){
         list.get(i).setStartSwitch(false);
         list.remove(i);
+    }
+
+    @GetMapping("/crwtest")
+    public String crwTest(@RequestParam String str){
+
+        Connection conn = Jsoup.connect(str);
+
+        Document html = null;
+
+        try {
+            html = conn.get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return html.toString();
     }
 }

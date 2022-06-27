@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 @Data
 @NoArgsConstructor
-@Entity
 public class testDto {
 
     @Id
