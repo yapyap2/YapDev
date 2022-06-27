@@ -34,7 +34,7 @@ public class testController {
     @GetMapping("/threadtest")
     public String threadTest(){
         threadTest thread = new threadTest();
-        thread.setNum(num++)    ;
+        thread.setNum(num++);
         thread.start();
         list.add(thread);
         return "tested....";
