@@ -7,7 +7,7 @@ spring:
     show-sql: true
   datasource:
     hikari:
-      jdbc-url: jdbc:mysql://yapdev-db.cxuu591yrej6.us-west-2.rds.amazonaws.com/yapdevDB
+      jdbc-url: jdbc:mysql://yapdev.cclnjigf9cpr.ap-northeast-2.rds.amazonaws.com
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: wonwoo8
       password: 1712wonwoo
