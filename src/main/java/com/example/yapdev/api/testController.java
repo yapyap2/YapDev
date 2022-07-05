@@ -32,18 +32,10 @@ public class testController {
     }
 
     @GetMapping("/threadtest")
-    public String threadTest(){
+    public String threadTest() {
         threadTest thread = new threadTest();
         thread.setNum(num++);
-        thread.start();
-        list.add(thread);
-        return "tested....";
-    }
-
-    @GetMapping("/threadstop")
-    public void threadStop(@RequestParam int i){
-        list.get(i).setStartSwitch(false);
-        list.remove(i);
+        return "";
     }
 
     @GetMapping("/crwtest")
