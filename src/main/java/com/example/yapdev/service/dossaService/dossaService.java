@@ -93,7 +93,7 @@ public class dossaService extends Thread{
 
     public Elements getProductString(){
 
-        Connection conn = Jsoup.connect("http://corearoadbike.com/board/board.php?t_id=Menu01Top6");
+        Connection conn = Jsoup.connect("https://corearoadbike.com/board/board.php?t_id=Menu01Top6");
 
         Document html = null;
         try {
